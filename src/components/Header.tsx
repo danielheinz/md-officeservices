@@ -11,12 +11,14 @@ const Header: React.FC = () => {
   
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition(window.scrollY);
+      if (!isMenuOpen) {
+        setScrollPosition(window.scrollY);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMenuOpen]);
 
   useEffect(() => {
     // Prevent body scrolling when menu is open
@@ -113,9 +115,9 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Modal - Fixed overlay */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-white z-10 lg:hidden">
-            <div className="container mx-auto py-6 px-4 h-full flex flex-col">
-              <div className="mt-16 mb-8"></div>
+          <div className="fixed inset-0 bg-white z-10 lg:hidden overflow-y-auto">
+            <div className="container mx-auto px-4 h-full flex flex-col">
+              <div className="pt-24 pb-8"></div>
               
               <div className="flex-1">
                 {/* Main Navigation Links */}
@@ -148,7 +150,7 @@ const Header: React.FC = () => {
               </div>
               
               {/* Contact Button at Bottom */}
-              <div className="mt-auto pt-6">
+              <div className="mt-auto py-6">
                 <a 
                   href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 
                   className="px-8 py-4 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white inline-flex items-center justify-center group w-full border border-figuro-dark-green/30"
