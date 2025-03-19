@@ -74,6 +74,14 @@ export default {
 					'gray-800': '#2D2B30',
 					'gray-900': '#1A191D',
 					'black': '#000000',
+				},
+				// New colors based on the example
+				figuro: {
+					'dark-green': '#1B442C',
+					'light-green': '#F2FCE2',
+					'medium-green': '#2A593F',
+					'cream': '#F5F5F3',
+					'border-green': '#3A6E52',
 				}
 			},
 			borderRadius: {
