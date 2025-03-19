@@ -43,7 +43,7 @@ const Header: React.FC = () => {
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center relative z-20">
           <img 
-            src="/lovable-uploads/15d842e2-c34f-4e57-87a5-66975a65f028.png" 
+            src="/lovable-uploads/a537ff3d-3798-446e-b8d4-172b019ac5c9.png" 
             alt="M&D Office Services Logo" 
             className={`transition-all duration-500 ${isScrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`}
           />

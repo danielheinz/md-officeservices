@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
         
-        <div className="relative mt-16 max-w-3xl mx-auto">
+        <div className="relative mt-16 max-w-2xl mx-auto">
           <img 
             src="/lovable-uploads/3a254657-cdf5-46e5-a96c-88902470f4fa.png" 
             alt="M&D Office Services Team" 

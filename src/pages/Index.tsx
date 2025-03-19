@@ -14,7 +14,7 @@ const Index = () => {
     window.scrollTo(0, 0);
     
     // Update page title
-    document.title = 'M&D Office Services - Ihre Büroarbeit in besten Händen';
+    document.title = 'M&D Office Services | Mehr Freiraum, mehr Effizienz';
   }, []);
 
   return (
