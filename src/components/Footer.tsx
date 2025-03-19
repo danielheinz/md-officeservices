@@ -14,14 +14,14 @@ const Footer: React.FC = () => {
             <div className="flex flex-col h-full justify-between">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                  Start Your Financial Journey With Us
+                  Beginnen Sie Ihre Zusammenarbeit mit uns
                 </h2>
                 
                 <a 
                   href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
                   className="inline-flex items-center bg-white text-figuro-dark-green px-6 py-3 rounded-full transition-all duration-300 hover:bg-figuro-cream group mt-6"
                 >
-                  <span className="font-medium">Get In Touch</span>
+                  <span className="font-medium">Kontakt aufnehmen</span>
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
@@ -29,9 +29,9 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="md:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
               <div>
-                <h3 className="font-semibold text-xl mb-6">Menu</h3>
+                <h3 className="font-semibold text-xl mb-6">Menü</h3>
                 <ul className="space-y-4">
                   <li>
                     <a href="#" className="text-white/80 hover:text-white transition-colors text-lg">Home</a>
@@ -44,15 +44,6 @@ const Footer: React.FC = () => {
                   </li>
                   <li>
                     <a href="#ueber-uns" className="text-white/80 hover:text-white transition-colors text-lg">Über uns</a>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="font-semibold text-xl mb-6">Follow Us</h3>
-                <ul className="space-y-4">
-                  <li>
-                    <a href="#" className="text-white/80 hover:text-white transition-colors text-lg">LinkedIn</a>
                   </li>
                 </ul>
               </div>
@@ -75,7 +66,7 @@ const Footer: React.FC = () => {
           </p>
           
           <img 
-            src="/lovable-uploads/30d94300-bd45-4027-a4e5-5a0bef11bdb4.png" 
+            src="/lovable-uploads/MD-Logo-White.png" 
             alt="M&D Office Services Logo" 
             className="h-10" 
           />

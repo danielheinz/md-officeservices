@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FileText, Briefcase, Search, Archive, CheckCircle, ArrowRight } from 'lucide-react';
+import { FileText, Briefcase, Search, Archive, CheckCircle, FileSearch } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -28,6 +28,11 @@ const Services: React.FC = () => {
       icon: <Archive className="w-7 h-7 text-figuro-dark-green" />,
       title: "Papierlose Archivierung",
       description: "Effiziente digitale Archivierung in Ihr vorhandenes Archivierungssystem."
+    },
+    {
+      icon: <FileSearch className="w-7 h-7 text-figuro-dark-green" />,
+      title: "Dokumentenmanagement",
+      description: "Strukturierte Organisation und Verwaltung Ihrer Dokumente für schnellen und sicheren Zugriff."
     }
   ];
 
@@ -40,38 +45,26 @@ const Services: React.FC = () => {
           </div>
         </div>
         
-        <div className="flex justify-between items-end mb-16">
+        <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-figuro-dark-green max-w-xl">
-            Precision That Powers Success
+            Präzision, die Erfolg schafft
           </h2>
-          
-          <a href="#" className="hidden md:flex items-center text-figuro-dark-green hover:text-figuro-medium-green bg-white px-6 py-3 rounded-full border border-figuro-border-green/20 group">
-            <span>Explore All</span>
-            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl">
+            <div key={index} className="bg-figuro-dark-green/5 border border-figuro-dark-green/10 p-8 rounded-xl hover:bg-white transition-all duration-300">
               <div className="mb-6">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold mb-4 text-figuro-dark-green">{service.title}</h3>
               <p className="text-figuro-dark-green/80 mb-6">{service.description}</p>
               <a href="#" className="inline-flex items-center text-figuro-dark-green font-medium group">
-                <span>Lean More</span>
+                <span>Mehr erfahren</span>
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           ))}
-        </div>
-        
-        <div className="flex justify-center mt-12 md:hidden">
-          <a href="#" className="flex items-center text-figuro-dark-green hover:text-figuro-medium-green bg-white px-6 py-3 rounded-full border border-figuro-border-green/20 group">
-            <span>Explore All</span>
-            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </a>
         </div>
       </div>
     </section>

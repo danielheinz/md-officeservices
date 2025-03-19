@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
               href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
               className="px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green inline-flex items-center justify-center group"
             >
-              <span className="font-medium">Get Started</span>
+              <span className="font-medium">Jetzt starten</span>
               <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1" />
             </a>
           </div>

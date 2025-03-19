@@ -27,7 +27,7 @@ const ContactCTA: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green group"
               >
                 <Mail className="w-5 h-5 mr-3" />
-                <span className="font-medium">Get In Touch</span>
+                <span className="font-medium">Kontakt aufnehmen</span>
                 <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1" />
               </a>
             </div>

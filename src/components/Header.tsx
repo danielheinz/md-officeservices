@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-figuro-cream/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="container-custom flex items-center justify-between py-5">
         <Link to="/" className="flex items-center">
           <img 
@@ -30,16 +30,19 @@ const Header: React.FC = () => {
           />
         </Link>
 
-        <div className="hidden lg:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-12 justify-center flex-grow">
           <a href="#leistungen" className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors">Leistungen</a>
           <a href="#vorteile" className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors">Vorteile</a>
           <a href="#ueber-uns" className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors">Über uns</a>
+        </div>
+
+        <div className="hidden lg:block">
           <a 
             href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-            className="px-6 py-2.5 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green inline-flex items-center group"
+            className="px-6 py-2.5 bg-white text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-cream border border-figuro-dark-green/30 inline-flex items-center group"
           >
             <span>Kontakt</span>
-            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1 text-figuro-dark-green" />
           </a>
         </div>
 
@@ -94,11 +97,11 @@ const Header: React.FC = () => {
                 </a>
                 <a 
                   href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-                  className="px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green inline-flex items-center justify-center group mt-6 w-full"
+                  className="px-8 py-4 bg-white text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-cream inline-flex items-center justify-center group mt-6 w-full border border-figuro-dark-green/30"
                   onClick={closeMenu}
                 >
                   <span>Kontakt</span>
-                  <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1 text-figuro-dark-green" />
                 </a>
               </nav>
             </div>
