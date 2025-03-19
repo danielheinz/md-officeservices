@@ -7,18 +7,31 @@ import { useIsMobile } from '../hooks/use-mobile';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [prevScrollPosition, setPrevScrollPosition] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
   const isMobile = useIsMobile();
   
   useEffect(() => {
     const handleScroll = () => {
       if (!isMenuOpen) {
-        setScrollPosition(window.scrollY);
+        const currentScrollPos = window.scrollY;
+        
+        // For mobile: hide/show based on scroll direction
+        if (isMobile) {
+          // Only hide header after scrolling down a bit (20px) to avoid flickering
+          if (currentScrollPos > 20) {
+            setIsVisible(prevScrollPosition > currentScrollPos || currentScrollPos < 10);
+          }
+        }
+        
+        setPrevScrollPosition(currentScrollPos);
+        setScrollPosition(currentScrollPos);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [isMenuOpen]);
+  }, [isMenuOpen, prevScrollPosition, isMobile]);
 
   useEffect(() => {
     // Prevent body scrolling when menu is open
@@ -48,7 +61,7 @@ const Header: React.FC = () => {
           : isScrolled 
             ? 'py-2 backdrop-blur-md' 
             : 'py-5'
-      }`}
+      } ${isMobile && !isVisible && !isMenuOpen ? '-translate-y-full' : 'translate-y-0'}`}
       style={{
         backgroundColor: isMobile 
           ? 'white' // Solid background for mobile always
