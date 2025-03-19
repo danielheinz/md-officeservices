@@ -18,10 +18,7 @@ const Header: React.FC = () => {
         
         // For mobile: hide/show based on scroll direction
         if (isMobile) {
-          // Only hide header after scrolling down a bit (20px) to avoid flickering
-          if (currentScrollPos > 20) {
-            setIsVisible(prevScrollPosition > currentScrollPos || currentScrollPos < 10);
-          }
+          setIsVisible(prevScrollPosition > currentScrollPos || currentScrollPos < 10);
         }
         
         setPrevScrollPosition(currentScrollPos);
