@@ -136,10 +136,10 @@ const Header: React.FC = () => {
           )}
         </button>
 
-        {/* Mobile Menu Modal - Always in DOM but conditionally visible */}
+        {/* Mobile Menu - Fixed Position */}
         <div 
-          className={`fixed inset-0 bg-white z-10 lg:hidden overflow-y-auto transition-opacity duration-300 ${
-            isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          className={`fixed inset-0 bg-white z-10 lg:hidden transition-transform duration-300 ${
+            isMenuOpen ? 'translate-y-0' : '-translate-y-full'
           }`}
         >
           <div className="container mx-auto px-4 pt-20 pb-6 flex flex-col h-full">
