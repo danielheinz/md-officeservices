@@ -5,11 +5,11 @@ import { Menu as MenuIcon, X, ArrowRight } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setScrollPosition(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -19,35 +19,69 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
+  // Calculate animations based on scroll position
+  const isScrolled = scrollPosition > 10;
+  const navbarOpacity = Math.min(0.95, 0.7 + (scrollPosition / 500));
+  
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-figuro-cream/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-      <div className="container-custom flex items-center justify-between py-5">
-        <Link to="/" className="flex items-center">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'py-3 border-b border-figuro-border-green/20 backdrop-blur-md' 
+          : 'py-6'
+      }`}
+      style={{
+        backgroundColor: isScrolled ? `rgba(245, 245, 243, ${navbarOpacity})` : 'transparent'
+      }}
+    >
+      <div className="container-custom flex items-center justify-between">
+        <Link to="/" className="flex items-center relative z-20">
           <img 
             src="/lovable-uploads/15d842e2-c34f-4e57-87a5-66975a65f028.png" 
             alt="M&D Office Services Logo" 
-            className="h-10 w-auto" 
+            className={`transition-all duration-300 ${isScrolled ? 'h-9 w-auto' : 'h-10 w-auto'}`}
           />
         </Link>
 
-        <div className="hidden lg:flex items-center space-x-12 justify-center flex-grow">
-          <a href="#leistungen" className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors">Leistungen</a>
-          <a href="#vorteile" className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors">Vorteile</a>
-          <a href="#ueber-uns" className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors">Über uns</a>
+        <div 
+          className={`hidden lg:flex items-center space-x-8 justify-center flex-grow transition-all duration-300 ${
+            isScrolled ? 'bg-transparent' : ''
+          }`}
+        >
+          <a 
+            href="#leistungen" 
+            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-figuro-medium-green/70 after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform"
+          >
+            Leistungen
+          </a>
+          <a 
+            href="#vorteile" 
+            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-figuro-medium-green/70 after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform"
+          >
+            Vorteile
+          </a>
+          <a 
+            href="#ueber-uns" 
+            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-figuro-medium-green/70 after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform"
+          >
+            Über uns
+          </a>
         </div>
 
         <div className="hidden lg:block">
           <a 
             href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-            className="px-6 py-2.5 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green/5 border border-figuro-dark-green/30 inline-flex items-center group"
+            className={`px-6 py-2.5 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white border border-figuro-dark-green/30 inline-flex items-center group ${
+              isScrolled ? 'scale-95' : ''
+            }`}
           >
             <span>Kontakt</span>
-            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1 text-figuro-dark-green" />
+            <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1 text-current" />
           </a>
         </div>
 
         <button 
-          className="p-2 rounded-md focus:outline-none lg:hidden"
+          className="p-2 rounded-md focus:outline-none lg:hidden relative z-20"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Menü schließen" : "Menü öffnen"}
         >
@@ -60,7 +94,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Modal */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-white z-50 lg:hidden animate-fade-in">
+          <div className="fixed inset-0 bg-white z-10 lg:hidden animate-fade-in">
             <div className="container mx-auto p-6">
               <div className="flex justify-between items-center mb-8">
                 <img 
@@ -97,11 +131,11 @@ const Header: React.FC = () => {
                 </a>
                 <a 
                   href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-                  className="px-8 py-4 bg-white text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-cream inline-flex items-center justify-center group mt-6 w-full border border-figuro-dark-green/30"
+                  className="px-8 py-4 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white inline-flex items-center justify-center group mt-6 w-full border border-figuro-dark-green/30"
                   onClick={closeMenu}
                 >
                   <span>Kontakt</span>
-                  <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1 text-figuro-dark-green" />
+                  <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1 text-current" />
                 </a>
               </nav>
             </div>
