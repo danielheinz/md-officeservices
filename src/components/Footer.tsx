@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col h-full justify-between">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                  Kontaktieren Sie uns
+                  Lassen Sie uns zusammenarbeiten
                 </h2>
                 
                 <a 
@@ -66,9 +66,9 @@ const Footer: React.FC = () => {
           </p>
           
           <img 
-            src="/lovable-uploads/MD-Logo-White.png" 
+            src="/lovable-uploads/19e0cdf5-bb7e-4dab-bd7d-95690d22d1f6.png" 
             alt="M&D Office Services Logo" 
-            className="h-10" 
+            className="h-12" 
           />
         </div>
       </div>
