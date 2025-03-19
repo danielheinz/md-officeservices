@@ -1,65 +1,40 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 const Founders: React.FC = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const elements = entry.target.querySelectorAll('.founder-item');
-          elements.forEach((el, index) => {
-            setTimeout(() => {
-              (el as HTMLElement).classList.add('opacity-100', 'translate-y-0');
-              (el as HTMLElement).classList.remove('opacity-0', 'translate-y-10');
-            }, index * 200);
-          });
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1,
-      rootMargin: '0px'
-    });
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <section id="ueber-uns" className="section-padding bg-md-gray-100" ref={sectionRef}>
+    <section id="ueber-uns" className="section-padding bg-md-gray-100">
       <div className="container-custom">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 bg-md-gray-200 text-md-gray-800 rounded-full text-sm font-medium mb-4">
-            Über uns
-          </span>
-          <h2 className="heading-lg mb-6">Unser Unternehmen</h2>
-          <p className="text-md-gray-600">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center bg-md-gray-200 text-md-gray-800 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+            <span className="mr-2">Über uns</span>
+            <div className="w-1.5 h-1.5 rounded-full bg-md-black"></div>
+          </div>
+          
+          <h2 className="heading-lg mb-6">
+            <span className="bg-gradient-to-r from-md-black via-md-gray-800 to-md-gray-700 bg-clip-text text-transparent">
+              Unser Unternehmen
+            </span>
+          </h2>
+          
+          <p className="text-md-gray-600 text-lg">
             M&D Office Services wurde 2023 gegründet und bietet deutschsprachige Remote-Unterstützung 
             für Büroarbeiten an. Wir helfen unseren Kunden, sich auf ihr Kerngeschäft zu konzentrieren.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          <div className="founder-item opacity-0 translate-y-10 transition-all duration-700 bg-white rounded-xl overflow-hidden shadow-sm">
-            <div className="relative aspect-square">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
+            <div className="relative aspect-[4/3]">
               <img 
-                src="/lovable-uploads/90e843f1-d01d-4e63-a625-dec0dbb3dd3d.png" 
+                src="/lovable-uploads/00bc0562-9381-4b7f-a132-13c157587019.png" 
                 alt="Max Reusswig - Gründer" 
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">Max Reusswig</h3>
+            <div className="p-8">
+              <h3 className="text-2xl font-semibold mb-1">Max Reusswig</h3>
               <p className="text-md-gray-500 mb-4">Mitgründer & Geschäftsführer</p>
               <p className="text-md-gray-600">
                 Experte für behördliche Genehmigungen und administrative Prozesse mit umfangreicher Erfahrung
@@ -68,16 +43,17 @@ const Founders: React.FC = () => {
             </div>
           </div>
 
-          <div className="founder-item opacity-0 translate-y-10 transition-all duration-700 bg-white rounded-xl overflow-hidden shadow-sm">
-            <div className="relative aspect-square">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
+            <div className="relative aspect-[4/3]">
               <img 
                 src="/lovable-uploads/63a51fbc-214f-4856-9753-2f60bf3179ee.png" 
                 alt="Darlyn Brown - Gründerin" 
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">Darlyn Brown</h3>
+            <div className="p-8">
+              <h3 className="text-2xl font-semibold mb-1">Darlyn Brown</h3>
               <p className="text-md-gray-500 mb-4">Mitgründerin & Geschäftsführerin</p>
               <p className="text-md-gray-600">
                 Spezialistin für digitale Arbeitsprozesse und papierlose Archivierung mit langjähriger

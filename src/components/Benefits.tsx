@@ -1,6 +1,6 @@
 
-import React, { useEffect, useRef } from 'react';
-import { DollarSign, Clock, Zap, Users, Globe, Heart } from 'lucide-react';
+import React from 'react';
+import { DollarSign, Heart, Zap, Clock, Globe, Users } from 'lucide-react';
 
 interface BenefitProps {
   icon: React.ReactNode;
@@ -8,46 +8,19 @@ interface BenefitProps {
   description: string;
 }
 
-const BenefitItem: React.FC<BenefitProps> = ({ icon, title, description }) => {
-  const itemRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-          entry.target.classList.remove('opacity-0', 'translate-y-10');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1,
-      rootMargin: '0px'
-    });
-
-    if (itemRef.current) {
-      observer.observe(itemRef.current);
-    }
-
-    return () => {
-      if (itemRef.current) {
-        observer.unobserve(itemRef.current);
-      }
-    };
-  }, []);
-
+const BenefitCard: React.FC<BenefitProps> = ({ icon, title, description }) => {
   return (
-    <div 
-      ref={itemRef}
-      className="flex items-start opacity-0 translate-y-10 transition-all duration-700"
-    >
-      <div className="w-10 h-10 rounded-lg bg-md-gray-100 flex items-center justify-center flex-shrink-0 mt-1">
-        {icon}
-      </div>
-      <div className="ml-4">
-        <h3 className="text-lg font-semibold mb-2">{title}</h3>
-        <p className="text-md-gray-600">{description}</p>
+    <div className="bg-white rounded-2xl p-8 shadow-sm border border-md-gray-200 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+      <div className="flex items-start">
+        <div className="mr-6 flex-shrink-0">
+          <div className="w-12 h-12 bg-gradient-to-br from-md-gray-200 to-md-gray-100 rounded-xl flex items-center justify-center">
+            {icon}
+          </div>
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-3">{title}</h3>
+          <p className="text-md-gray-600">{description}</p>
+        </div>
       </div>
     </div>
   );
@@ -88,35 +61,34 @@ const Benefits: React.FC = () => {
   ];
 
   return (
-    <section id="vorteile" className="section-padding bg-white">
+    <section id="vorteile" className="section-padding bg-gradient-to-b from-white to-md-gray-100">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div>
-            <span className="inline-block px-3 py-1 bg-md-gray-200 text-md-gray-800 rounded-full text-sm font-medium mb-4">
-              Ihre Vorteile
-            </span>
-            <h2 className="heading-lg mb-8">Warum Sie mit uns arbeiten sollten</h2>
-            
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl mb-8 lg:mb-0">
-              <img 
-                src="/lovable-uploads/4c795e55-a739-4863-b76f-4694b4d54510.png" 
-                alt="Büroarbeiten" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-md-gray-900/30 to-transparent"></div>
-            </div>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center bg-md-gray-200 text-md-gray-800 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+            <span className="mr-2">Ihre Vorteile</span>
+            <div className="w-1.5 h-1.5 rounded-full bg-md-black"></div>
           </div>
           
-          <div className="space-y-10">
-            {benefits.map((benefit, index) => (
-              <BenefitItem
-                key={index}
-                icon={benefit.icon}
-                title={benefit.title}
-                description={benefit.description}
-              />
-            ))}
-          </div>
+          <h2 className="heading-lg mb-6">
+            <span className="bg-gradient-to-r from-md-black via-md-gray-800 to-md-gray-700 bg-clip-text text-transparent">
+              Warum Sie mit uns arbeiten sollten
+            </span>
+          </h2>
+          
+          <p className="text-md-gray-600 text-lg">
+            Wir bieten Ihnen zahlreiche Vorteile, die Ihre Arbeit erleichtern und Ihnen mehr Zeit für Ihr Kerngeschäft verschaffen.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {benefits.map((benefit, index) => (
+            <BenefitCard
+              key={index}
+              icon={benefit.icon}
+              title={benefit.title}
+              description={benefit.description}
+            />
+          ))}
         </div>
       </div>
     </section>

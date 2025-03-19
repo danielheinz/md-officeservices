@@ -26,7 +26,7 @@ const Impressum = () => {
               />
             </Link>
             
-            <Link to="/" className="button-secondary">
+            <Link to="/" className="button-secondary flex items-center justify-center">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück zur Startseite
             </Link>
@@ -37,7 +37,11 @@ const Impressum = () => {
       <main className="flex-grow py-16">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <h1 className="heading-lg mb-8">Impressum</h1>
+            <h1 className="heading-lg mb-10">
+              <span className="bg-gradient-to-r from-md-black via-md-gray-800 to-md-gray-700 bg-clip-text text-transparent">
+                Impressum
+              </span>
+            </h1>
             
             <div className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-semibold mt-8 mb-4">Angaben gemäß § 5 TMG</h2>
@@ -52,7 +56,7 @@ const Impressum = () => {
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">Kontakt</h2>
               <p>
-                E-Mail: max@md-officeservices.com
+                E-Mail: <a href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" className="text-md-gray-800 hover:text-md-black underline">max@md-officeservices.com</a>
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4">Redaktionell verantwortlich</h2>
