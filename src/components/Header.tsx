@@ -20,8 +20,8 @@ const Header: React.FC = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
-      <div className="container-custom flex items-center justify-between py-4">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+      <div className="container-custom flex items-center justify-between py-5">
         <Link to="/" className="flex items-center">
           <img 
             src="/lovable-uploads/15d842e2-c34f-4e57-87a5-66975a65f028.png" 
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
           <a href="#ueber-uns" className="text-md-gray-800 hover:text-md-black font-medium transition-colors">Über uns</a>
           <a 
             href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-            className="button-primary group flex items-center justify-center"
+            className="px-6 py-2.5 bg-md-black text-white rounded-xl transition-all duration-300 hover:bg-md-gray-800 inline-flex items-center group"
           >
             <span>Kontakt</span>
             <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -95,11 +95,11 @@ const Header: React.FC = () => {
               </a>
               <a 
                 href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-                className="button-primary group flex items-center justify-center mt-6"
+                className="px-8 py-4 bg-md-black text-white rounded-xl transition-all duration-300 hover:bg-md-gray-800 inline-flex items-center justify-center group mt-6 w-full"
                 onClick={closeMenu}
               >
                 <span>Kontakt</span>
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1" />
               </a>
             </nav>
           </div>
