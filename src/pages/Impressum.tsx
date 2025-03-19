@@ -20,7 +20,7 @@ const Impressum = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/852f7e46-eb8e-43a2-b6c6-562d308e467e.png" 
+                src="/lovable-uploads/73eb37d3-08e5-462e-9083-b1fc1b595403.png" 
                 alt="M&D Office Services Logo" 
                 className="h-12 w-auto" 
               />
