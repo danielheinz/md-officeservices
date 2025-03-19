@@ -26,7 +26,7 @@ const Founders: React.FC = () => {
           <div className="flex flex-col">
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/122ce38b-6342-4e1f-b4cc-3a22e0c00a11.png" 
+                src="/lovable-uploads/7835425f-30e5-47f8-aed6-4ef21e61e7f4.png" 
                 alt="Max Reusswig - Gründer" 
                 className="w-full h-auto rounded-xl"
               />

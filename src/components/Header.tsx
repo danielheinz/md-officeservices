@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu as MenuIcon, X, ArrowRight, Mail } from 'lucide-react';
+import { Menu as MenuIcon, X, ArrowRight } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const Header: React.FC = () => {
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
   
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'py-2 backdrop-blur-md' 
           : 'py-5'
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
           <img 
             src="/lovable-uploads/a537ff3d-3798-446e-b8d4-172b019ac5c9.png" 
             alt="M&D Office Services Logo" 
-            className={`transition-all duration-500 ${isScrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`}
+            className={`transition-all duration-300 ${isScrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`}
           />
         </Link>
 
@@ -113,9 +113,8 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Modal - Fixed overlay */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-white z-10 lg:hidden animate-fade-in">
+          <div className="fixed inset-0 bg-white z-10 lg:hidden">
             <div className="container mx-auto py-6 px-4 h-full flex flex-col">
-              {/* We're removing the duplicated header here */}
               <div className="mt-16 mb-8"></div>
               
               <div className="flex-1">
@@ -144,12 +143,6 @@ const Header: React.FC = () => {
                     onClick={closeMenu}
                   >
                     Impressum
-                  </Link>
-                  <Link to="/datenschutz" 
-                    className="text-xl font-medium text-figuro-dark-green/70 hover:text-figuro-medium-green transition-colors"
-                    onClick={closeMenu}
-                  >
-                    Datenschutz
                   </Link>
                 </nav>
               </div>

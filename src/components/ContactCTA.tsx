@@ -6,7 +6,7 @@ const ContactCTA: React.FC = () => {
   return (
     <section className="py-20 bg-figuro-cream">
       <div className="container-custom">
-        <div className="bg-white rounded-2xl p-16 text-center">
+        <div className="bg-white rounded-2xl p-8 md:p-16 text-center">
           <div className="max-w-3xl mx-auto">
             <div className="inline-flex items-center bg-figuro-cream text-figuro-dark-green text-sm font-medium px-4 py-1.5 rounded-full mb-6">
               <span className="mr-2">Bereit für Effizienz?</span>
@@ -24,11 +24,11 @@ const ContactCTA: React.FC = () => {
             <div className="flex justify-center">
               <a 
                 href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-                className="inline-flex items-center px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green group"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green group"
               >
-                <Mail className="w-5 h-5 mr-3" />
-                <span className="font-medium">Kontakt aufnehmen</span>
-                <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1" />
+                <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
+                <span className="font-medium whitespace-nowrap">Kontakt aufnehmen</span>
+                <ArrowRight className="w-5 h-5 ml-3 flex-shrink-0 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>

@@ -21,11 +21,11 @@ const Hero: React.FC = () => {
           <div className="flex justify-center">
             <a 
               href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-              className="px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green inline-flex items-center justify-center group"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green group"
             >
-              <Mail className="w-5 h-5 mr-3" />
-              <span className="font-medium">Kontakt aufnehmen</span>
-              <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1" />
+              <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
+              <span className="font-medium whitespace-nowrap">Kontakt aufnehmen</span>
+              <ArrowRight className="w-5 h-5 ml-3 flex-shrink-0 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
         </div>
