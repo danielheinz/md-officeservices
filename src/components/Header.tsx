@@ -43,7 +43,11 @@ const Header: React.FC = () => {
     };
   }, [isMenuOpen]);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    console.log("Menu toggled:", !isMenuOpen); // Debug log
+  };
+  
   const closeMenu = () => setIsMenuOpen(false);
 
   // Calculate animations based on scroll position - only for desktop
@@ -123,6 +127,7 @@ const Header: React.FC = () => {
           className="p-2 rounded-md focus:outline-none lg:hidden relative z-20"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Menü schließen" : "Menü öffnen"}
+          type="button"
         >
           {isMenuOpen ? (
             <X className="h-6 w-6 text-figuro-dark-green" />
@@ -131,54 +136,56 @@ const Header: React.FC = () => {
           )}
         </button>
 
-        {/* Mobile Menu Modal - Fixed overlay */}
-        {isMenuOpen && (
-          <div className="fixed inset-0 bg-white z-10 lg:hidden overflow-y-auto">
-            <div className="container mx-auto px-4 pt-20 pb-6 flex flex-col h-full">
-              <div className="flex-1">
-                {/* Main Navigation Links */}
-                <nav className="flex flex-col space-y-6 pt-6">
-                  <a href="#leistungen" 
-                    className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors" 
-                    onClick={closeMenu}
-                  >
-                    Leistungen
-                  </a>
-                  <a href="#vorteile" 
-                    className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
-                    onClick={closeMenu}
-                  >
-                    Vorteile
-                  </a>
-                  <a href="#ueber-uns" 
-                    className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
-                    onClick={closeMenu}
-                  >
-                    Über uns
-                  </a>
-                  <Link to="/impressum" 
-                    className="text-xl font-medium text-figuro-dark-green/70 hover:text-figuro-medium-green transition-colors"
-                    onClick={closeMenu}
-                  >
-                    Impressum
-                  </Link>
-                </nav>
-              </div>
-              
-              {/* Contact Button at Bottom */}
-              <div className="mt-auto py-6">
-                <a 
-                  href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 
-                  className="px-8 py-4 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white inline-flex items-center justify-center group w-full border border-figuro-dark-green/30"
+        {/* Mobile Menu Modal - Always in DOM but conditionally visible */}
+        <div 
+          className={`fixed inset-0 bg-white z-10 lg:hidden overflow-y-auto transition-opacity duration-300 ${
+            isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
+        >
+          <div className="container mx-auto px-4 pt-20 pb-6 flex flex-col h-full">
+            <div className="flex-1">
+              {/* Main Navigation Links */}
+              <nav className="flex flex-col space-y-6 pt-6">
+                <a href="#leistungen" 
+                  className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors" 
                   onClick={closeMenu}
                 >
-                  <span className="font-medium">Kontakt</span>
-                  <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1 text-current" />
+                  Leistungen
                 </a>
-              </div>
+                <a href="#vorteile" 
+                  className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
+                  onClick={closeMenu}
+                >
+                  Vorteile
+                </a>
+                <a href="#ueber-uns" 
+                  className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
+                  onClick={closeMenu}
+                >
+                  Über uns
+                </a>
+                <Link to="/impressum" 
+                  className="text-xl font-medium text-figuro-dark-green/70 hover:text-figuro-medium-green transition-colors"
+                  onClick={closeMenu}
+                >
+                  Impressum
+                </Link>
+              </nav>
+            </div>
+            
+            {/* Contact Button at Bottom */}
+            <div className="mt-auto py-6">
+              <a 
+                href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 
+                className="px-8 py-4 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white inline-flex items-center justify-center group w-full border border-figuro-dark-green/30"
+                onClick={closeMenu}
+              >
+                <span className="font-medium">Kontakt</span>
+                <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1 text-current" />
+              </a>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
