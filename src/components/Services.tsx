@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { FileText, Briefcase, Search, Archive, CheckCircle, FileSearch } from 'lucide-react';
+import { FileText, Briefcase, Search, Archive, CheckCircle, FileSearch, ArrowRight } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
