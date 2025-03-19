@@ -1,12 +1,16 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Mail, ArrowRight, MapPin, Phone } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const isMobile = useIsMobile();
+  const location = useLocation();
+  
+  const getLink = (sectionId: string) => {
+    return location.pathname === '/' ? `#${sectionId}` : `/#${sectionId}`;
+  };
   
   return (
     <footer className="bg-figuro-dark-green py-12 text-white">
@@ -39,13 +43,13 @@ const Footer: React.FC = () => {
                     <Link to="/" className="text-white/80 hover:text-white transition-colors">Home</Link>
                   </li>
                   <li>
-                    <Link to="/#leistungen" className="text-white/80 hover:text-white transition-colors">Leistungen</Link>
+                    <Link to={getLink("leistungen")} className="text-white/80 hover:text-white transition-colors">Leistungen</Link>
                   </li>
                   <li>
-                    <Link to="/#vorteile" className="text-white/80 hover:text-white transition-colors">Vorteile</Link>
+                    <Link to={getLink("vorteile")} className="text-white/80 hover:text-white transition-colors">Vorteile</Link>
                   </li>
                   <li>
-                    <Link to="/#ueber-uns" className="text-white/80 hover:text-white transition-colors">Über uns</Link>
+                    <Link to={getLink("ueber-uns")} className="text-white/80 hover:text-white transition-colors">Über uns</Link>
                   </li>
                 </ul>
               </div>
