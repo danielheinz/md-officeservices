@@ -18,6 +18,19 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Prevent body scrolling when menu is open
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -98,29 +111,12 @@ const Header: React.FC = () => {
           )}
         </button>
 
-        {/* Mobile Menu Modal - Simplified without Rechtliches */}
+        {/* Mobile Menu Modal - Fixed overlay */}
         {isMenuOpen && (
           <div className="fixed inset-0 bg-white z-10 lg:hidden animate-fade-in">
-            <div className="container mx-auto p-6 h-full flex flex-col">
-              <div className="flex justify-between items-center mb-8">
-                <img 
-                  src="/lovable-uploads/a537ff3d-3798-446e-b8d4-172b019ac5c9.png" 
-                  alt="M&D Office Services Logo" 
-                  className="h-10 w-auto" 
-                />
-                <button 
-                  className="p-2 rounded-md focus:outline-none"
-                  onClick={closeMenu}
-                  aria-label="Menü schließen"
-                >
-                  <X className="h-6 w-6 text-figuro-dark-green" />
-                </button>
-              </div>
-              
-              {/* Mobile Menu Section Headers - Removed Rechtliches */}
-              <div className="flex justify-between items-center border-b border-figuro-dark-green/10 pb-2 mb-6">
-                <h3 className="text-xl font-semibold text-figuro-dark-green">Menü</h3>
-              </div>
+            <div className="container mx-auto py-6 px-4 h-full flex flex-col">
+              {/* We're removing the duplicated header here */}
+              <div className="mt-16 mb-8"></div>
               
               <div className="flex-1">
                 {/* Main Navigation Links */}
