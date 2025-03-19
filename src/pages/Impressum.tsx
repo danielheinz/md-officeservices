@@ -20,7 +20,7 @@ const Impressum = () => {
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/15d842e2-c34f-4e57-87a5-66975a65f028.png" 
+                src="/lovable-uploads/852f7e46-eb8e-43a2-b6c6-562d308e467e.png" 
                 alt="M&D Office Services Logo" 
                 className="h-12 w-auto" 
               />
@@ -36,51 +36,51 @@ const Impressum = () => {
       
       <main className="flex-grow py-16 bg-figuro-cream">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto bg-white p-10 rounded-2xl">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-10 text-figuro-dark-green">
               Impressum
             </h1>
             
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none text-figuro-dark-green/80">
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Angaben gemäß § 5 TMG</h2>
-              <p className="text-figuro-dark-green/80">
+              <p>
                 M&D OFFICE SERVICES FZCO<br />
                 Dubai Silicon Oasis, DDP, Building A1<br />
                 Dubai, United Arab Emirates
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Vertreten durch</h2>
-              <p className="text-figuro-dark-green/80">Max Reusswig & Darlyn Brown</p>
+              <p>Max Reusswig & Darlyn Brown</p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Kontakt</h2>
-              <p className="text-figuro-dark-green/80">
+              <p>
                 E-Mail: <a href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" className="text-figuro-medium-green hover:text-figuro-dark-green underline">max@md-officeservices.com</a>
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Redaktionell verantwortlich</h2>
-              <p className="text-figuro-dark-green/80">Max Reusswig</p>
+              <p>Max Reusswig</p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Haftung für Inhalte</h2>
-              <p className="text-figuro-dark-green/80">
+              <p>
                 Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
               </p>
-              <p className="text-figuro-dark-green/80">
+              <p>
                 Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Haftung für Links</h2>
-              <p className="text-figuro-dark-green/80">
+              <p>
                 Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
               </p>
-              <p className="text-figuro-dark-green/80">
+              <p>
                 Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
               </p>
               
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Urheberrecht</h2>
-              <p className="text-figuro-dark-green/80">
+              <p>
                 Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
               </p>
-              <p className="text-figuro-dark-green/80">
+              <p>
                 Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
               </p>
             </div>

@@ -2,14 +2,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, ArrowRight, MapPin, Phone } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const isMobile = useIsMobile();
   
   return (
-    <footer className="bg-figuro-dark-green py-16 text-white">
+    <footer className="bg-figuro-dark-green py-12 text-white">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10">
           <div className="md:col-span-5">
             <div className="flex flex-col h-full justify-between">
               <div>
@@ -29,30 +31,30 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="md:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div className="grid grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-xl mb-6">Menü</h3>
-                <ul className="space-y-4">
+                <h3 className="font-semibold text-xl mb-4">Menü</h3>
+                <ul className="space-y-3">
                   <li>
-                    <a href="#" className="text-white/80 hover:text-white transition-colors text-lg">Home</a>
+                    <a href="#" className="text-white/80 hover:text-white transition-colors">Home</a>
                   </li>
                   <li>
-                    <a href="#leistungen" className="text-white/80 hover:text-white transition-colors text-lg">Leistungen</a>
+                    <a href="#leistungen" className="text-white/80 hover:text-white transition-colors">Leistungen</a>
                   </li>
                   <li>
-                    <a href="#vorteile" className="text-white/80 hover:text-white transition-colors text-lg">Vorteile</a>
+                    <a href="#vorteile" className="text-white/80 hover:text-white transition-colors">Vorteile</a>
                   </li>
                   <li>
-                    <a href="#ueber-uns" className="text-white/80 hover:text-white transition-colors text-lg">Über uns</a>
+                    <a href="#ueber-uns" className="text-white/80 hover:text-white transition-colors">Über uns</a>
                   </li>
                 </ul>
               </div>
               
               <div>
-                <h3 className="font-semibold text-xl mb-6">Rechtliches</h3>
-                <ul className="space-y-4">
+                <h3 className="font-semibold text-xl mb-4">Rechtliches</h3>
+                <ul className="space-y-3">
                   <li>
-                    <Link to="/impressum" className="text-white/80 hover:text-white transition-colors text-lg">Impressum</Link>
+                    <Link to="/impressum" className="text-white/80 hover:text-white transition-colors">Impressum</Link>
                   </li>
                 </ul>
               </div>
