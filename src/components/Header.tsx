@@ -89,7 +89,7 @@ const Header: React.FC = () => {
 
         <div className="hidden lg:flex items-center space-x-4">
           <a 
-            href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
+            href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 
             className={`px-6 py-2.5 text-figuro-dark-green rounded-full transition-all duration-300 border border-figuro-dark-green/30 hover:bg-figuro-dark-green hover:text-white inline-flex items-center group ${
               isScrolled ? 'scale-95' : ''
             }`}
@@ -150,7 +150,7 @@ const Header: React.FC = () => {
               {/* Contact Button at Bottom */}
               <div className="mt-auto pt-6">
                 <a 
-                  href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
+                  href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 
                   className="px-8 py-4 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white inline-flex items-center justify-center group w-full border border-figuro-dark-green/30"
                   onClick={closeMenu}
                 >

@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
                 </h2>
                 
                 <a 
-                  href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
+                  href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 
                   className="inline-flex items-center bg-white text-figuro-dark-green px-6 py-3 rounded-full transition-all duration-300 hover:bg-figuro-cream group mt-6"
                 >
                   <span className="font-medium">Kontakt aufnehmen</span>

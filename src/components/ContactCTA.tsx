@@ -23,7 +23,7 @@ const ContactCTA: React.FC = () => {
             
             <div className="flex justify-center">
               <a 
-                href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
+                href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 
                 className="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green group"
               >
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
