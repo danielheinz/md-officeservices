@@ -36,21 +36,29 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Calculate animations based on scroll position
+  // Calculate animations based on scroll position - only for desktop
   const isScrolled = scrollPosition > 10;
   const navbarOpacity = Math.min(0.98, 0.7 + (scrollPosition / 500));
   
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'py-2 backdrop-blur-md' 
-          : 'py-5'
+        isMobile 
+          ? 'py-3 bg-white border-b border-figuro-dark-green/15' 
+          : isScrolled 
+            ? 'py-2 backdrop-blur-md' 
+            : 'py-5'
       }`}
       style={{
-        backgroundColor: isScrolled ? `rgba(245, 245, 243, ${navbarOpacity})` : 'transparent',
-        borderBottom: isScrolled ? '1px solid rgba(42, 89, 63, 0.15)' : 'none',
-        boxShadow: isScrolled ? '0 4px 20px rgba(42, 89, 63, 0.04)' : 'none'
+        backgroundColor: isMobile 
+          ? 'white' // Solid background for mobile always
+          : isScrolled ? `rgba(245, 245, 243, ${navbarOpacity})` : 'transparent',
+        borderBottom: isMobile 
+          ? '1px solid rgba(42, 89, 63, 0.15)' 
+          : isScrolled ? '1px solid rgba(42, 89, 63, 0.15)' : 'none',
+        boxShadow: isMobile
+          ? '0 2px 10px rgba(42, 89, 63, 0.04)'
+          : isScrolled ? '0 4px 20px rgba(42, 89, 63, 0.04)' : 'none'
       }}
     >
       <div className="container-custom flex items-center justify-between">
@@ -58,7 +66,7 @@ const Header: React.FC = () => {
           <img 
             src="/lovable-uploads/a537ff3d-3798-446e-b8d4-172b019ac5c9.png" 
             alt="M&D Office Services Logo" 
-            className={`transition-all duration-300 ${isScrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`}
+            className={`transition-all duration-300 ${isMobile || isScrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`}
           />
         </Link>
 
@@ -116,12 +124,10 @@ const Header: React.FC = () => {
         {/* Mobile Menu Modal - Fixed overlay */}
         {isMenuOpen && (
           <div className="fixed inset-0 bg-white z-10 lg:hidden overflow-y-auto">
-            <div className="container mx-auto px-4 h-full flex flex-col">
-              <div className="pt-24 pb-8"></div>
-              
+            <div className="container mx-auto px-4 pt-20 pb-6 flex flex-col h-full">
               <div className="flex-1">
                 {/* Main Navigation Links */}
-                <nav className="flex flex-col space-y-6">
+                <nav className="flex flex-col space-y-6 pt-6">
                   <a href="#leistungen" 
                     className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors" 
                     onClick={closeMenu}
