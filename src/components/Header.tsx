@@ -1,13 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu as MenuIcon, X, ArrowRight, ChevronDown } from 'lucide-react';
+import { Menu as MenuIcon, X, ArrowRight, Mail } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [legalMenuOpen, setLegalMenuOpen] = useState(false);
   const isMobile = useIsMobile();
   
   useEffect(() => {
@@ -21,7 +20,6 @@ const Header: React.FC = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
-  const toggleLegalMenu = () => setLegalMenuOpen(!legalMenuOpen);
 
   // Calculate animations based on scroll position
   const isScrolled = scrollPosition > 10;
@@ -100,13 +98,13 @@ const Header: React.FC = () => {
           )}
         </button>
 
-        {/* Mobile Menu Modal */}
+        {/* Mobile Menu Modal - Simplified without Rechtliches */}
         {isMenuOpen && (
           <div className="fixed inset-0 bg-white z-10 lg:hidden animate-fade-in">
             <div className="container mx-auto p-6 h-full flex flex-col">
               <div className="flex justify-between items-center mb-8">
                 <img 
-                  src="/lovable-uploads/15d842e2-c34f-4e57-87a5-66975a65f028.png" 
+                  src="/lovable-uploads/a537ff3d-3798-446e-b8d4-172b019ac5c9.png" 
                   alt="M&D Office Services Logo" 
                   className="h-10 w-auto" 
                 />
@@ -119,64 +117,45 @@ const Header: React.FC = () => {
                 </button>
               </div>
               
-              {/* Mobile Menu Section Headers */}
+              {/* Mobile Menu Section Headers - Removed Rechtliches */}
               <div className="flex justify-between items-center border-b border-figuro-dark-green/10 pb-2 mb-6">
                 <h3 className="text-xl font-semibold text-figuro-dark-green">Menü</h3>
-                <div className="flex items-center">
-                  <h3 
-                    className="text-xl font-semibold text-figuro-dark-green flex items-center cursor-pointer"
-                    onClick={toggleLegalMenu}
-                  >
-                    Rechtliches
-                    <ChevronDown 
-                      className={`w-5 h-5 ml-1 transition-transform duration-300 ${legalMenuOpen ? 'rotate-180' : ''}`} 
-                    />
-                  </h3>
-                </div>
               </div>
               
-              <div className="flex-1 flex">
+              <div className="flex-1">
                 {/* Main Navigation Links */}
-                <div className="w-1/2 pr-4">
-                  <nav className="flex flex-col space-y-6">
-                    <a href="#leistungen" 
-                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors" 
-                      onClick={closeMenu}
-                    >
-                      Leistungen
-                    </a>
-                    <a href="#vorteile" 
-                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
-                      onClick={closeMenu}
-                    >
-                      Vorteile
-                    </a>
-                    <a href="#ueber-uns" 
-                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
-                      onClick={closeMenu}
-                    >
-                      Über uns
-                    </a>
-                  </nav>
-                </div>
-                
-                {/* Legal Links */}
-                <div className={`w-1/2 pl-4 ${legalMenuOpen ? 'block' : 'hidden'}`}>
-                  <nav className="flex flex-col space-y-6 opacity-90">
-                    <Link to="/impressum" 
-                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
-                      onClick={closeMenu}
-                    >
-                      Impressum
-                    </Link>
-                    <Link to="/datenschutz" 
-                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
-                      onClick={closeMenu}
-                    >
-                      Datenschutz
-                    </Link>
-                  </nav>
-                </div>
+                <nav className="flex flex-col space-y-6">
+                  <a href="#leistungen" 
+                    className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors" 
+                    onClick={closeMenu}
+                  >
+                    Leistungen
+                  </a>
+                  <a href="#vorteile" 
+                    className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
+                    onClick={closeMenu}
+                  >
+                    Vorteile
+                  </a>
+                  <a href="#ueber-uns" 
+                    className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
+                    onClick={closeMenu}
+                  >
+                    Über uns
+                  </a>
+                  <Link to="/impressum" 
+                    className="text-xl font-medium text-figuro-dark-green/70 hover:text-figuro-medium-green transition-colors"
+                    onClick={closeMenu}
+                  >
+                    Impressum
+                  </Link>
+                  <Link to="/datenschutz" 
+                    className="text-xl font-medium text-figuro-dark-green/70 hover:text-figuro-medium-green transition-colors"
+                    onClick={closeMenu}
+                  >
+                    Datenschutz
+                  </Link>
+                </nav>
               </div>
               
               {/* Contact Button at Bottom */}
