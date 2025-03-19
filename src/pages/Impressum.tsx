@@ -28,7 +28,7 @@ const Impressum = () => {
             
             <Link to="/" className="inline-flex items-center px-5 py-2 bg-white text-figuro-dark-green rounded-full border border-figuro-border-green/30 transition-all duration-300 hover:bg-figuro-cream group">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              <span className="font-medium">Zurück zur Startseite</span>
+              <span className="font-medium">Zur Startseite</span>
             </Link>
           </div>
         </div>
