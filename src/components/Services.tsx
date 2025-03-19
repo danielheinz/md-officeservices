@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileText, Briefcase, Search, Archive, CheckCircle, FileSearch, ArrowRight } from 'lucide-react';
 
@@ -46,7 +47,7 @@ const Services: React.FC = () => {
         
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-figuro-dark-green max-w-xl">
-            Präzision, die Erfolg schafft
+            Unsere Büroservices
           </h2>
         </div>
 
@@ -57,11 +58,7 @@ const Services: React.FC = () => {
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold mb-4 text-figuro-dark-green">{service.title}</h3>
-              <p className="text-figuro-dark-green/80 mb-6">{service.description}</p>
-              <a href="#" className="inline-flex items-center text-figuro-dark-green font-medium group">
-                <span>Mehr erfahren</span>
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              <p className="text-figuro-dark-green/80">{service.description}</p>
             </div>
           ))}
         </div>

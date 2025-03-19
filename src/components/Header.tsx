@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         <div className="hidden lg:block">
           <a 
             href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-            className="px-6 py-2.5 bg-white text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-cream border border-figuro-dark-green/30 inline-flex items-center group"
+            className="px-6 py-2.5 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green/5 border border-figuro-dark-green/30 inline-flex items-center group"
           >
             <span>Kontakt</span>
             <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1 text-figuro-dark-green" />

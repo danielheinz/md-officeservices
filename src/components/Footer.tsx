@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col h-full justify-between">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                  Beginnen Sie Ihre Zusammenarbeit mit uns
+                  Kontaktieren Sie uns
                 </h2>
                 
                 <a 
