@@ -1,11 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu as MenuIcon, X, ArrowRight } from 'lucide-react';
+import { Menu as MenuIcon, X, ArrowRight, ChevronDown } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [legalMenuOpen, setLegalMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -18,20 +21,23 @@ const Header: React.FC = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+  const toggleLegalMenu = () => setLegalMenuOpen(!legalMenuOpen);
 
   // Calculate animations based on scroll position
   const isScrolled = scrollPosition > 10;
-  const navbarOpacity = Math.min(0.95, 0.7 + (scrollPosition / 500));
+  const navbarOpacity = Math.min(0.98, 0.7 + (scrollPosition / 500));
   
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'py-3 border-b border-figuro-border-green/20 backdrop-blur-md' 
-          : 'py-6'
+          ? 'py-2 backdrop-blur-md' 
+          : 'py-5'
       }`}
       style={{
-        backgroundColor: isScrolled ? `rgba(245, 245, 243, ${navbarOpacity})` : 'transparent'
+        backgroundColor: isScrolled ? `rgba(245, 245, 243, ${navbarOpacity})` : 'transparent',
+        borderBottom: isScrolled ? '1px solid rgba(42, 89, 63, 0.15)' : 'none',
+        boxShadow: isScrolled ? '0 4px 20px rgba(42, 89, 63, 0.04)' : 'none'
       }}
     >
       <div className="container-custom flex items-center justify-between">
@@ -39,43 +45,45 @@ const Header: React.FC = () => {
           <img 
             src="/lovable-uploads/15d842e2-c34f-4e57-87a5-66975a65f028.png" 
             alt="M&D Office Services Logo" 
-            className={`transition-all duration-300 ${isScrolled ? 'h-9 w-auto' : 'h-10 w-auto'}`}
+            className={`transition-all duration-500 ${isScrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`}
           />
         </Link>
 
         <div 
-          className={`hidden lg:flex items-center space-x-8 justify-center flex-grow transition-all duration-300 ${
-            isScrolled ? 'bg-transparent' : ''
-          }`}
+          className={`hidden lg:flex items-center space-x-10 justify-center flex-grow transition-all duration-300`}
         >
+          {/* Main Navigation Items */}
           <a 
             href="#leistungen" 
-            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-figuro-medium-green/70 after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform"
+            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors duration-300 relative group"
           >
-            Leistungen
+            <span className="relative z-10">Leistungen</span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-figuro-medium-green origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </a>
           <a 
             href="#vorteile" 
-            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-figuro-medium-green/70 after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform"
+            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors duration-300 relative group"
           >
-            Vorteile
+            <span className="relative z-10">Vorteile</span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-figuro-medium-green origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </a>
           <a 
             href="#ueber-uns" 
-            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-figuro-medium-green/70 after:scale-x-0 after:origin-right hover:after:scale-x-100 hover:after:origin-left after:transition-transform"
+            className="text-figuro-dark-green hover:text-figuro-medium-green font-medium transition-colors duration-300 relative group"
           >
-            Über uns
+            <span className="relative z-10">Über uns</span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-figuro-medium-green origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </a>
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center space-x-4">
           <a 
             href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-            className={`px-6 py-2.5 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white border border-figuro-dark-green/30 inline-flex items-center group ${
+            className={`px-6 py-2.5 text-figuro-dark-green rounded-full transition-all duration-300 border border-figuro-dark-green/30 hover:bg-figuro-dark-green hover:text-white inline-flex items-center group ${
               isScrolled ? 'scale-95' : ''
             }`}
           >
-            <span>Kontakt</span>
+            <span className="font-medium">Kontakt</span>
             <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1 text-current" />
           </a>
         </div>
@@ -95,7 +103,7 @@ const Header: React.FC = () => {
         {/* Mobile Menu Modal */}
         {isMenuOpen && (
           <div className="fixed inset-0 bg-white z-10 lg:hidden animate-fade-in">
-            <div className="container mx-auto p-6">
+            <div className="container mx-auto p-6 h-full flex flex-col">
               <div className="flex justify-between items-center mb-8">
                 <img 
                   src="/lovable-uploads/15d842e2-c34f-4e57-87a5-66975a65f028.png" 
@@ -110,34 +118,78 @@ const Header: React.FC = () => {
                   <X className="h-6 w-6 text-figuro-dark-green" />
                 </button>
               </div>
-              <nav className="flex flex-col space-y-8">
-                <a href="#leistungen" 
-                  className="text-2xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors" 
-                  onClick={closeMenu}
-                >
-                  Leistungen
-                </a>
-                <a href="#vorteile" 
-                  className="text-2xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
-                  onClick={closeMenu}
-                >
-                  Vorteile
-                </a>
-                <a href="#ueber-uns" 
-                  className="text-2xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
-                  onClick={closeMenu}
-                >
-                  Über uns
-                </a>
+              
+              {/* Mobile Menu Section Headers */}
+              <div className="flex justify-between items-center border-b border-figuro-dark-green/10 pb-2 mb-6">
+                <h3 className="text-xl font-semibold text-figuro-dark-green">Menü</h3>
+                <div className="flex items-center">
+                  <h3 
+                    className="text-xl font-semibold text-figuro-dark-green flex items-center cursor-pointer"
+                    onClick={toggleLegalMenu}
+                  >
+                    Rechtliches
+                    <ChevronDown 
+                      className={`w-5 h-5 ml-1 transition-transform duration-300 ${legalMenuOpen ? 'rotate-180' : ''}`} 
+                    />
+                  </h3>
+                </div>
+              </div>
+              
+              <div className="flex-1 flex">
+                {/* Main Navigation Links */}
+                <div className="w-1/2 pr-4">
+                  <nav className="flex flex-col space-y-6">
+                    <a href="#leistungen" 
+                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors" 
+                      onClick={closeMenu}
+                    >
+                      Leistungen
+                    </a>
+                    <a href="#vorteile" 
+                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
+                      onClick={closeMenu}
+                    >
+                      Vorteile
+                    </a>
+                    <a href="#ueber-uns" 
+                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
+                      onClick={closeMenu}
+                    >
+                      Über uns
+                    </a>
+                  </nav>
+                </div>
+                
+                {/* Legal Links */}
+                <div className={`w-1/2 pl-4 ${legalMenuOpen ? 'block' : 'hidden'}`}>
+                  <nav className="flex flex-col space-y-6 opacity-90">
+                    <Link to="/impressum" 
+                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
+                      onClick={closeMenu}
+                    >
+                      Impressum
+                    </Link>
+                    <Link to="/datenschutz" 
+                      className="text-xl font-medium text-figuro-dark-green hover:text-figuro-medium-green transition-colors"
+                      onClick={closeMenu}
+                    >
+                      Datenschutz
+                    </Link>
+                  </nav>
+                </div>
+              </div>
+              
+              {/* Contact Button at Bottom */}
+              <div className="mt-auto pt-6">
                 <a 
                   href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage an M&D Office Services" 
-                  className="px-8 py-4 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white inline-flex items-center justify-center group mt-6 w-full border border-figuro-dark-green/30"
+                  className="px-8 py-4 bg-transparent text-figuro-dark-green rounded-full transition-all duration-300 hover:bg-figuro-dark-green hover:text-white inline-flex items-center justify-center group w-full border border-figuro-dark-green/30"
                   onClick={closeMenu}
                 >
-                  <span>Kontakt</span>
+                  <span className="font-medium">Kontakt</span>
                   <ArrowRight className="w-5 h-5 ml-3 transition-transform group-hover:translate-x-1 text-current" />
                 </a>
-              </nav>
+              </div>
             </div>
           </div>
         )}
