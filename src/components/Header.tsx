@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu as MenuIcon, X, ArrowRight } from 'lucide-react';
@@ -60,13 +59,13 @@ const Header: React.FC = () => {
         }}
       >
         <div className="container-custom flex items-center justify-between">
-          <Link to="/" className="flex items-center relative z-20">
+          <a href="/" className="flex items-center relative z-20">
             <img 
               src="/lovable-uploads/a537ff3d-3798-446e-b8d4-172b019ac5c9.png" 
               alt="M&D Office Services Logo" 
               className={`transition-all duration-300 ${isMobile || isScrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`}
             />
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           {!isMobile && (
