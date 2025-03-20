@@ -48,9 +48,6 @@ const Footer: React.FC = () => {
                 <h3 className="font-semibold text-xl mb-4">Menü</h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link to="/" className="text-white/80 hover:text-white transition-colors">Home</Link>
-                  </li>
-                  <li>
                     <a href={getLink("leistungen")} className="text-white/80 hover:text-white transition-colors">Leistungen</a>
                   </li>
                   <li>
