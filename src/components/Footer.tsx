@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Mail, ArrowRight, MapPin, Phone } from 'lucide-react';
@@ -22,6 +23,13 @@ const Footer: React.FC = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                   Lassen Sie uns zusammenarbeiten
                 </h2>
+                
+                <div className="flex items-center mt-4 text-white/80">
+                  <Mail className="w-5 h-5 mr-2" />
+                  <a href="mailto:max@md-officeservices.com" className="hover:text-white transition-colors">
+                    max@md-officeservices.com
+                  </a>
+                </div>
                 
                 <a 
                   href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 

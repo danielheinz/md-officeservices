@@ -15,6 +15,24 @@ const Index = () => {
     
     // Update page title
     document.title = 'M&D Office Services | Mehr Freiraum, mehr Effizienz';
+    
+    // Handle anchor links when navigating from other pages
+    const handleAnchorLinks = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        // Remove the # character
+        const id = hash.substring(1);
+        const element = document.getElementById(id);
+        if (element) {
+          // Add a slight delay to ensure everything is loaded
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    };
+    
+    handleAnchorLinks();
   }, []);
 
   return (
@@ -22,9 +40,15 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <Services />
-        <Benefits />
-        <Founders />
+        <section id="leistungen">
+          <Services />
+        </section>
+        <section id="vorteile">
+          <Benefits />
+        </section>
+        <section id="ueber-uns">
+          <Founders />
+        </section>
         <ContactCTA />
       </main>
       <Footer />
