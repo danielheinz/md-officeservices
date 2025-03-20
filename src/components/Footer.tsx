@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                 
                 <div className="flex items-center mt-4 text-white/80">
                   <Mail className="w-5 h-5 mr-2" />
-                  <a href="mailto:max@md-officeservices.com" className="hover:text-white transition-colors">
+                  <a href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" className="hover:text-white transition-colors">
                     max@md-officeservices.com
                   </a>
                 </div>
@@ -51,13 +51,13 @@ const Footer: React.FC = () => {
                     <Link to="/" className="text-white/80 hover:text-white transition-colors">Home</Link>
                   </li>
                   <li>
-                    <Link to={getLink("leistungen")} className="text-white/80 hover:text-white transition-colors">Leistungen</Link>
+                    <a href={getLink("leistungen")} className="text-white/80 hover:text-white transition-colors">Leistungen</a>
                   </li>
                   <li>
-                    <Link to={getLink("vorteile")} className="text-white/80 hover:text-white transition-colors">Vorteile</Link>
+                    <a href={getLink("vorteile")} className="text-white/80 hover:text-white transition-colors">Vorteile</a>
                   </li>
                   <li>
-                    <Link to={getLink("ueber-uns")} className="text-white/80 hover:text-white transition-colors">Über uns</Link>
+                    <a href={getLink("ueber-uns")} className="text-white/80 hover:text-white transition-colors">Über uns</a>
                   </li>
                 </ul>
               </div>
