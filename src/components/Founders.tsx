@@ -22,7 +22,7 @@ const Founders: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col">
             <div className="mb-6">
-              <img src="/lovable-uploads/7835425f-30e5-47f8-aed6-4ef21e61e7f4.png" alt="Max Reusswig - Gründer" className="w-full h-auto rounded-xl" />
+              <img alt="Max Reusswig - Gründer" className="w-full h-auto rounded-xl" src="/lovable-uploads/c97ddfa2-caac-4ad1-a003-987dc764665d.png" />
             </div>
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-1 text-figuro-dark-green">Max Reusswig</h3>
