@@ -36,7 +36,7 @@ const Founders: React.FC = () => {
 
           <div className="flex flex-col">
             <div className="mb-6">
-              <img alt="Darlyn Brown - Gründerin" className="w-full h-auto rounded-xl" src="/lovable-uploads/324cd408-2b66-4a43-ad0e-5a1f0949dcab.jpg" />
+              <img alt="Darlyn Brown - Gründerin" className="w-full h-auto rounded-xl" src="/lovable-uploads/14559c5d-ad6e-426a-858e-65ea5bf8117b.png" />
             </div>
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-1 text-figuro-dark-green">Darlyn Brown</h3>
