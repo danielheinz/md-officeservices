@@ -24,10 +24,7 @@ const Founders: React.FC = () => {
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-1 text-figuro-dark-green">Max Reusswig</h3>
               <p className="text-figuro-dark-green/70 mb-4">Mitgründer & Geschäftsführer</p>
-              <p className="text-figuro-dark-green/80">
-                Experte für behördliche Genehmigungen und administrative Prozesse mit umfangreicher Erfahrung
-                in der Optimierung von Büroarbeiten und Geschäftsabläufen.
-              </p>
+              <p className="text-figuro-dark-green/80">Mit über 10-jähriger Erfahrung im Vertrieb, Experte für behördliche Genehmigungen und administrative Prozesse mit umfangreicher Erfahrung in der Optimierung von Büroarbeiten und Geschäftsabläufen.</p>
             </div>
           </div>
 
@@ -38,10 +35,7 @@ const Founders: React.FC = () => {
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-1 text-figuro-dark-green">Darlyn Brown</h3>
               <p className="text-figuro-dark-green/70 mb-4">Mitgründerin & Geschäftsführerin</p>
-              <p className="text-figuro-dark-green/80">
-                Spezialistin für digitale Arbeitsprozesse und papierlose Archivierung mit langjähriger
-                Erfahrung in der effizienten Bearbeitung administrativer Aufgaben.
-              </p>
+              <p className="text-figuro-dark-green/80">Spezialistin für digitale Arbeitsprozesse, papierlose Archivierung und Einholung behördlicher Genehmigungen mit über 10-jähriger Erfahrung in der effizienten Bearbeitung administrativer Aufgaben.</p>
             </div>
           </div>
         </div>
