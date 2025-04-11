@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileText, Briefcase, Search, Archive, CheckCircle, FileSearch, ArrowRight } from 'lucide-react';
+
 const Services: React.FC = () => {
   const services = [{
     icon: <Briefcase className="w-7 h-7 text-figuro-dark-green" />,
@@ -16,7 +17,7 @@ const Services: React.FC = () => {
   }, {
     icon: <Search className="w-7 h-7 text-figuro-dark-green" />,
     title: "Planauskünfte",
-    description: "Professionelle Beantragung von Planauskünften bei verschiedenen Behörden und Versorgern."
+    description: "Einholung von Planauskünften bei Behörden und Versorgern."
   }, {
     icon: <Archive className="w-7 h-7 text-figuro-dark-green" />,
     title: "Papierlose Archivierung",
@@ -26,6 +27,7 @@ const Services: React.FC = () => {
     title: "Dokumentenmanagement",
     description: "Strukturierte Organisation und Verwaltung Ihrer Dokumente für schnellen und sicheren Zugriff."
   }];
+
   return <section id="leistungen" className="py-24 bg-figuro-cream">
       <div className="container-custom">
         <div className="mb-4">
@@ -50,4 +52,5 @@ const Services: React.FC = () => {
       </div>
     </section>;
 };
+
 export default Services;
