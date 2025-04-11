@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const Founders: React.FC = () => {
-  return (
-    <section id="ueber-uns" className="py-24 bg-figuro-cream">
+  return <section id="ueber-uns" className="py-24 bg-figuro-cream">
       <div className="container-custom">
         <div className="mb-4">
           <div className="inline-flex items-center bg-white text-figuro-dark-green text-sm font-medium px-4 py-1.5 rounded-full mb-6 border border-figuro-border-green/20">
@@ -25,11 +22,7 @@ const Founders: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col">
             <div className="mb-6">
-              <img 
-                src="/lovable-uploads/7835425f-30e5-47f8-aed6-4ef21e61e7f4.png" 
-                alt="Max Reusswig - Gründer" 
-                className="w-full h-auto rounded-xl"
-              />
+              <img src="/lovable-uploads/7835425f-30e5-47f8-aed6-4ef21e61e7f4.png" alt="Max Reusswig - Gründer" className="w-full h-auto rounded-xl" />
             </div>
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-1 text-figuro-dark-green">Max Reusswig</h3>
@@ -43,11 +36,7 @@ const Founders: React.FC = () => {
 
           <div className="flex flex-col">
             <div className="mb-6">
-              <img 
-                src="/lovable-uploads/63a51fbc-214f-4856-9753-2f60bf3179ee.png" 
-                alt="Darlyn Brown - Gründerin" 
-                className="w-full h-auto rounded-xl"
-              />
+              <img alt="Darlyn Brown - Gründerin" className="w-full h-auto rounded-xl" src="/lovable-uploads/324cd408-2b66-4a43-ad0e-5a1f0949dcab.jpg" />
             </div>
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-1 text-figuro-dark-green">Darlyn Brown</h3>
@@ -60,8 +49,6 @@ const Founders: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Founders;
