@@ -63,7 +63,7 @@ const Header: React.FC = () => {
             <img 
               src="/lovable-uploads/a537ff3d-3798-446e-b8d4-172b019ac5c9.png" 
               alt="M&D Office Services Logo" 
-              className={`transition-all duration-300 ${isMobile || isScrolled ? 'h-8 w-auto' : 'h-10 w-auto'}`}
+              className={`transition-all duration-300 ${isMobile || isScrolled ? 'h-[9.2px] w-auto' : 'h-[11.5px] w-auto'}`}
             />
           </a>
 
