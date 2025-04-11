@@ -9,12 +9,9 @@ const ContactCTA: React.FC = () => {
               <span className="mr-2">Bereit für Effizienz?</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-figuro-dark-green">Wir freuen uns darauf, Sie bei Ihren administrativen Aufgaben zu unterstützen!</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-figuro-dark-green">Nehmen Sie Kontakt mit uns auf</h2>
             
-            <p className="text-figuro-dark-green/80 text-xl mb-10 leading-relaxed">
-              Wir freuen uns darauf, Sie bei Ihren administrativen Aufgaben zu unterstützen und Ihnen 
-              zu helfen, sich auf Ihr Kerngeschäft zu konzentrieren.
-            </p>
+            <p className="text-figuro-dark-green/80 text-xl mb-10 leading-relaxed">Wir freuen uns darauf, Sie bei Ihren administrativen Aufgaben zu unterstützen. Lassen Sie uns gemeinsam Ihre Ziele erreichen!</p>
             
             <div className="flex justify-center">
               <a href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" className="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-4 bg-figuro-dark-green text-white rounded-full transition-all duration-300 hover:bg-figuro-medium-green group">
