@@ -9,7 +9,7 @@ const ContactCTA: React.FC = () => {
               <span className="mr-2">Bereit für Effizienz?</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-figuro-dark-green">Wir freuen uns darauf, Sie bei Ihren administrativen Aufgaben zu unterstützen. Lassen Sie uns gemeinsam Ihre Ziele erreichen!</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-figuro-dark-green">Wir freuen uns darauf, Sie bei Ihren administrativen Aufgaben zu unterstützen!</h2>
             
             <p className="text-figuro-dark-green/80 text-xl mb-10 leading-relaxed">
               Wir freuen uns darauf, Sie bei Ihren administrativen Aufgaben zu unterstützen und Ihnen 
