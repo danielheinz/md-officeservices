@@ -14,10 +14,7 @@ const Founders: React.FC = () => {
           </h2>
         </div>
 
-        <p className="text-figuro-dark-green/80 text-lg mb-16 max-w-3xl">
-          M&D Office Services wurde 2023 gegründet und bietet deutschsprachige Remote-Unterstützung 
-          für Büroarbeiten an. Wir helfen unseren Kunden, sich auf ihr Kerngeschäft zu konzentrieren.
-        </p>
+        <p className="text-figuro-dark-green/80 text-lg mb-16 max-w-3xl">M&amp;D Office Services wurde 2023 gegründet und bietet deutschsprachige Remote-Unterstützung für Büroarbeiten an. Wir entlasten den Arbeitsalltag unserer Kunden und unterstützen sie dabei, sich auf ihr Kerngeschäft zu konzentrieren.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col">
