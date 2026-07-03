@@ -50,7 +50,7 @@ const Datenschutz = () => {
                 97877 Wertheim<br />
                 Deutschland<br />
                 <br />
-                Vertreten durch:<br />
+                Vertreten durch: <br />
                 Maximilian Reußwig<br />
                 Darlyn Brown<br />
                 <br />
