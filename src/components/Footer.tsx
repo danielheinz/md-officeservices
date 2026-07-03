@@ -30,6 +30,13 @@ const Footer: React.FC = () => {
                     max@md-officeservices.com
                   </a>
                 </div>
+                <div className="flex items-center mt-2 text-white/80">
+                  <Phone className="w-5 h-5 mr-2" />
+                  <a href="tel:+491732571637" className="hover:text-white transition-colors">
+                    +49 173 2571637
+                  </a>
+                </div>
+                
                 
                 <a 
                   href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" 
@@ -65,6 +72,9 @@ const Footer: React.FC = () => {
                   <li>
                     <Link to="/impressum" className="text-white/80 hover:text-white transition-colors">Impressum</Link>
                   </li>
+                  <li>
+                    <Link to="/datenschutz" className="text-white/80 hover:text-white transition-colors">Datenschutz</Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -73,7 +83,7 @@ const Footer: React.FC = () => {
         
         <div className="flex items-center justify-between pt-8 border-t border-white/20 flex-wrap gap-4">
           <p className="text-white/60">
-            &copy; {currentYear} M&D Office Services FZCO. Alle Rechte vorbehalten.
+            &copy; 2026 Reußwig & Brown GbR | Alle Rechte vorbehalten
           </p>
           
           <img 
