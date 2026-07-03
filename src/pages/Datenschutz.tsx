@@ -45,17 +45,15 @@ const Datenschutz = () => {
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">2. Verantwortlicher</h2>
               <p>
-                Reußwig & Brown GbR<br />
+                Reußwig &amp; Brown GbR<br />
                 Würzburger Str. 83<br />
                 97877 Wertheim<br />
-                Deutschland
-              </p>
-              <p>
+                Deutschland<br />
+                <br />
                 Vertreten durch:<br />
                 Maximilian Reußwig<br />
-                Darlyn Brown
-              </p>
-              <p>
+                Darlyn Brown<br />
+                <br />
                 Telefon: <a href="tel:+491732571637" className="text-figuro-medium-green hover:text-figuro-dark-green underline">+49 173 2571637</a><br />
                 E-Mail: <a href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" className="text-figuro-medium-green hover:text-figuro-dark-green underline">max@md-officeservices.com</a>
               </p>
@@ -71,7 +69,9 @@ const Datenschutz = () => {
                 <li>Datum und Uhrzeit des Zugriffs</li>
                 <li>Referrer URL</li>
               </ul>
-              <p>Diese Daten dienen der technischen Sicherheit und Stabilität.</p>
+              <p className="mt-4">
+                Diese Daten dienen der technischen Sicherheit und Stabilität.
+              </p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">4. Kontaktaufnahme</h2>
               <p>
