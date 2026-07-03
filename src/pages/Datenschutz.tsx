@@ -59,8 +59,8 @@ const Datenschutz = () => {
               </p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">3. Datenerfassung beim Besuch der Website</h2>
-              <p>
-                Beim Besuch dieser Website werden automatisch Informationen durch den Hosting-Anbieter erfasst:
+              <p className="mb-2">
+                Beim Besuch dieser Website werden automatisch Informationen durch den Hosting-Anbieter erfasst: <br />
               </p>
               <ul className="list-disc pl-6 space-y-1">
                 <li>IP-Adresse</li>
@@ -84,7 +84,7 @@ const Datenschutz = () => {
               </p>
 
               <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">6. Rechte betroffener Personen</h2>
-              <p>Sie haben jederzeit das Recht auf:</p>
+              <p className="mb-2">Sie haben jederzeit das Recht auf: <br /></p>
               <ul className="list-disc pl-6 space-y-1">
                 <li>Auskunft</li>
                 <li>Berichtigung</li>
