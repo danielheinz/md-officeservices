@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Footer from '../components/Footer';
 
-const Impressum = () => {
+const Datenschutz = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Impressum - Reußwig & Brown GbR';
+    document.title = 'Datenschutzerklärung - Reußwig & Brown GbR';
   }, []);
 
   return (
@@ -34,53 +34,69 @@ const Impressum = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-10 text-figuro-dark-green">
-              Impressum
+              Datenschutzerklärung
             </h1>
 
             <div className="prose prose-lg max-w-none text-figuro-dark-green/80">
-              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Angaben gemäß § 5 TMG</h2>
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">1. Allgemeine Hinweise</h2>
+              <p>
+                Der Schutz Ihrer persönlichen Daten ist uns wichtig. Wir behandeln personenbezogene Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften.
+              </p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">2. Verantwortlicher</h2>
               <p>
                 Reußwig & Brown GbR<br />
                 Würzburger Str. 83<br />
                 97877 Wertheim<br />
                 Deutschland
               </p>
-
-              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Vertreten durch die Gesellschafter</h2>
               <p>
+                Vertreten durch:<br />
                 Maximilian Reußwig<br />
                 Darlyn Brown
               </p>
-
-              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Kontakt</h2>
               <p>
                 Telefon: <a href="tel:+491732571637" className="text-figuro-medium-green hover:text-figuro-dark-green underline">+49 173 2571637</a><br />
                 E-Mail: <a href="mailto:max@md-officeservices.com?subject=Geschäftsanfrage" className="text-figuro-medium-green hover:text-figuro-dark-green underline">max@md-officeservices.com</a>
               </p>
 
-              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Umsatzsteuer-ID gemäß § 27a UStG</h2>
-              <p>Wird nachgereicht</p>
-
-              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">3. Datenerfassung beim Besuch der Website</h2>
               <p>
-                Maximilian Reußwig<br />
-                Würzburger Str. 83<br />
-                97877 Wertheim
+                Beim Besuch dieser Website werden automatisch Informationen durch den Hosting-Anbieter erfasst:
+              </p>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>IP-Adresse</li>
+                <li>Browsertyp</li>
+                <li>Betriebssystem</li>
+                <li>Datum und Uhrzeit des Zugriffs</li>
+                <li>Referrer URL</li>
+              </ul>
+              <p>Diese Daten dienen der technischen Sicherheit und Stabilität.</p>
+
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">4. Kontaktaufnahme</h2>
+              <p>
+                Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, werden Ihre Angaben zwecks Bearbeitung Ihrer Anfrage gespeichert.
               </p>
 
-              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Haftung für Inhalte</h2>
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">5. Cookies</h2>
               <p>
-                Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+                Diese Website kann Cookies verwenden. Cookies dienen dazu, die Nutzung der Website benutzerfreundlicher zu gestalten.
               </p>
 
-              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Haftung für Links</h2>
-              <p>
-                Unsere Website enthält Links zu externen Websites Dritter. Auf deren Inhalte haben wir keinen Einfluss und übernehmen deshalb keine Gewähr.
-              </p>
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">6. Rechte betroffener Personen</h2>
+              <p>Sie haben jederzeit das Recht auf:</p>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Auskunft</li>
+                <li>Berichtigung</li>
+                <li>Löschung</li>
+                <li>Einschränkung der Verarbeitung</li>
+                <li>Datenübertragbarkeit</li>
+                <li>Widerspruch</li>
+              </ul>
 
-              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">Urheberrecht</h2>
+              <h2 className="text-2xl font-semibold mt-8 mb-4 text-figuro-dark-green">7. Beschwerderecht</h2>
               <p>
-                Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.
+                Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.
               </p>
             </div>
           </div>
@@ -92,4 +108,4 @@ const Impressum = () => {
   );
 };
 
-export default Impressum;
+export default Datenschutz;
