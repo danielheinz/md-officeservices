@@ -25,7 +25,7 @@ const CookieBanner: React.FC = () => {
 
   return (
     <div
-      className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 md:max-w-md z-[60] bg-white border border-figuro-dark-green/15 rounded-2xl shadow-lg p-5 animate-fade-in"
+      className="fixed bottom-4 left-4 right-4 md:right-auto md:left-6 md:bottom-6 md:max-w-md z-[60] bg-white border border-figuro-dark-green/15 rounded-2xl shadow-lg p-5 animate-fade-in"
       role="dialog"
       aria-label="Cookie-Hinweis"
     >
