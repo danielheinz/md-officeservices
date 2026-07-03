@@ -19,10 +19,10 @@ const Founders: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col">
             <div className="mb-6">
-              <img alt="Max Reusswig - Gründer" className="w-full h-auto rounded-xl" src="/lovable-uploads/c97ddfa2-caac-4ad1-a003-987dc764665d.png" />
+              <img alt="Max Reußwig - Gründer" className="w-full h-auto rounded-xl" src="/lovable-uploads/c97ddfa2-caac-4ad1-a003-987dc764665d.png" />
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-semibold mb-1 text-figuro-dark-green">Max Reusswig</h3>
+              <h3 className="text-2xl font-semibold mb-1 text-figuro-dark-green">Max Reußwig</h3>
               <p className="text-figuro-dark-green/70 mb-4">Mitgründer & Geschäftsführer</p>
               <p className="text-figuro-dark-green/80">Mit über 10-jähriger Erfahrung im Vertrieb, Experte für behördliche Genehmigungen und administrative Prozesse mit umfangreicher Erfahrung in der Optimierung von Büroarbeiten und Geschäftsabläufen.</p>
             </div>
